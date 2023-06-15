@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    
+    text-decoration: none;
+    font-family:'Courier New', Courier, monospace ;
+    color: black;
+}
+li{
+    list-style-type: none;
+}
+body{
+    position: relative;
+    background-image: url('src/imgs/main-bg.jpg');
+    background-size: cover; 
+    background-position: center; 
+}
+
+.AppContainer{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 'sb a b' 'sb c d';
+}
+#SideBar{
+    grid-area: sb;
+    margin-top: 30px;
+    margin-left: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.CardListContainer{
+
+}
+.CardListContainer .CardList{
+    width: 250px;
+    /* grid-template-rows: 1fr; */
+    border: 1px solid black;
+}
+.CardListContainer .CardItem{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+}
+.CardListContainer .ID{
+    width: 80px;
+    height: 25px;
+    border: 1px solid black;
+    line-height: 25px;
+}
+.CardListContainer .PlateCode{
+    width: 170px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid black;
+}
+#FrontCam{
+    grid-area: a;
+    /* border: 2px solid black;
+    border-radius: 10px; */
+}
+#BackCam{
+    grid-area: c;
+    /* border: 2px solid black;
+    border-radius: 10px; */
+}
+.CameraContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.displayNone{
+    display: none;
+}
+.CameraContainer .inputIDContainer{
+    position: absolute;
+    right: -102px;
+    top: 170px;
+}
+.inputIDContainer button:hover{
+    cursor: pointer;
+}
+.SessionTitle{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 5px 0;
+}
+.FrameContainer{
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.CameraContainer{
+    
+    
+}
+
+.FrameContainer{
+
+}
+.FrameContainer img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    background-color: white;
+}
+.FrameContainer input{
+    display: none;
+}
+.CardInfoContainer{
+    grid-area: b;
+    /* border: 2px solid black;
+    border-radius: 10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.TagContainer{
+    /* width: 100px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    
+}
+.TagLabel{
+    text-align: left;
+    min-width: 125px;
+   padding: 0 10px;
+}
+.TagDetail{
+    text-align: center;
+    padding: 0 10px;
+    height: 20px;
+    min-width: 100px;
+    background-color: #D9D9D9;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.CardInfoContainer>.SessionTitle{
+    text-align: center;
+}
+
+.DetailContainer{
+    border: 2px solid black;
+    border-radius: 10px;
+    /* margin: 10px; */
+    width: 396px;
+    height: 296px;
+    background-color: white;
+}
+.PublicInfoContainer{
+
+}
+.PrivateInfoContainer{
+
+}
+#BikePic{
+    position: relative;
+}
+.BikePicContainer{
+    width:100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+.LogContainer{
+    grid-area: d;
+    /* border: 2px solid black;
+    border-radius: 10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.LogTextContainer{
+    width: 400px;
+    height: 300px;
+    overflow-y: scroll;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.LogMessage{
+    font-size: 12px;
+    padding: 2px 10px;
+}
