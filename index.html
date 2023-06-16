@@ -37,20 +37,27 @@
         <div id='FrontCam' class="CameraContainer">
             <div class="SessionTitle">Camera trước</div>
             <div class="FrameContainer">
+                <canvas class="frontFrame "></canvas>
                 <input type="file">
                 <img src="src/imgs/uploadImg.png" alt="Front Camera Frame">
+                <video src=""></video>
             </div>
+            <button class="uploadVideo displayNone">Upload new Video</button>
             <div class="inputIDContainer displayNone">
-                <input type="text" class="inputIDCard">
+                <input type="text" class="inputIDCard" >
+                <!-- <label for="frontInputIDCard">Nhãn:</label> -->
                 <button class="inputIDButton">OK</button>
             </div>
         </div>
         <div id='BackCam' class="CameraContainer">
             <div class="SessionTitle">Camera sau</div>
             <div class="FrameContainer">
+                <canvas class="frontFrame"></canvas>
                 <input type="file">
                 <img src="src/imgs/uploadImg.png" alt="Back Camera Frame">
+                <video src=""></video>
             </div>
+            <button class="uploadVideo displayNone">Upload new Video</button>
             <div class="inputIDContainer displayNone">
                 <input type="text" class="inputIDCard">
                 <button class="inputIDButton">OK</button>
@@ -61,11 +68,11 @@
             <div class="DetailContainer">
                 <div class="frontActionContainer">
                     <div class="breakspace" style="font-style: italic; font-weight: bold; padding: 0 15px;">Cổng trước</div>
-                    <div class="actionbox">Mời vào</div>
+                    <div class="actionbox">Đóng cổng</div>
                 </div>
                 <div class="backActionContainer">
                     <div class="breakspace" style="font-style: italic; font-weight: bold; padding: 0 15px;">Cổng sau</div>
-                    <div class="actionbox">Mời vào</div>
+                    <div class="actionbox">Đóng cổng</div>
                 </div>
                 
             </div>
