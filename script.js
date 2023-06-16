@@ -14,7 +14,8 @@ const RenderCardlist=()=>{
     CardListElement.innerHTML=html
 }
 const HandleEvents=()=>{
-    
+    var currentIDFront=0
+    var currentIDBack=0
     const FrameBoxs=$$('.FrameContainer img')
     const InputFiles=$$('.FrameContainer input')
     //Handle Upload Video
@@ -56,7 +57,7 @@ const HandleEvents=()=>{
                 const fps=60
                 var currentFrame = Math.floor(video.currentTime *fps);
                 console.log(currentFrame)
-                if (Detect[index_dectect][0]==currentFrame){
+                if (Detect[index_dectect][0]<=currentFrame+5 && currentFrame-5<=Detect[index_dectect][0]){
                   console.log('detect')
                   video.pause()
                   index_dectect+=1
@@ -81,6 +82,23 @@ const HandleEvents=()=>{
                 }
               }
             }
+
+        }
+        const FrontInputIDButton=$('#FrontCam .inputIDButton')
+        FrontInputIDButton.onclick=()=>{
+          const inputTag=FrontInputIDButton.previousElementSibling;
+          var inputValue=inputTag.value
+          console.log(inputValue)
+          var check=CardList.filter((card)=>{
+            return card[0]==inputValue 
+          })
+          console.log(check)
+          if (check.length){
+            alert(`Thẻ ${inputValue} đã được nạp, vui lòng nhập thẻ khác!`);
+            inputTag.value=''
+          } else{
+            FrontInputIDButton.parentNode.style.display='none'
+          }
 
         }
     });
